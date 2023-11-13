@@ -15,11 +15,6 @@ app.use(morgan('dev'))
 // Middlewares
 app.use(express.json());
 
-// Start the server
-app.listen(PORT, () => {
-    console.log(`Server is running on port http://localhost:${PORT}`);
-});
-
 
 // Connect to MongoDB
 const ConnectionDB = async () => {
@@ -31,7 +26,11 @@ const ConnectionDB = async () => {
         // process.exit(1)
     }
 }
-ConnectionDB()
+ConnectionDB().then(() => {
+    app.listen(PORT, () => {
+        console.log(`Server is running on port http://localhost:${PORT}`);
+    });
+})
 
 // Routes
 const Routes = require('./routes/index')
