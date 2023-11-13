@@ -5,4 +5,8 @@ const routes = express.Router()
 const authRoutes = require('./auth/authRoutes')
 routes.use("/", authRoutes)
 
+// todo routes
+const todoRoutes = require('./todo/todoRoutes')
+routes.use("/todos", todoRoutes)
+
 module.exports = routes

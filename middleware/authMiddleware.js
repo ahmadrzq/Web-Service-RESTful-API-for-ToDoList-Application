@@ -1,5 +1,24 @@
 // authMiddleware.js
 const { body, validationResult } = require('express-validator');
+const jwt = require('jsonwebtoken');
+const { SECRET_KEY } = process.env;
+
+const authenticateToken = (req, res, next) => {
+    const token = req.headers.authorization;
+
+    if (!token) {
+        return res.status(401).json({ code: 401, message: 'Unauthorized: Token is missing.' });
+    }
+
+    jwt.verify(token, SECRET_KEY, (err, user) => {
+        if (err) {
+            return res.status(403).json({ code: 403, message: 'Forbidden: Invalid token.' });
+        }
+
+        req.user = user;
+        next();
+    });
+};
 
 const registerValidation = [
     body('name').notEmpty().withMessage('Name cannot be empty.'),
@@ -25,4 +44,4 @@ const validate = (req, res, next) => {
     next();
 };
 
-module.exports = { registerValidation, loginValidation, validate };
+module.exports = { registerValidation, loginValidation, validate, authenticateToken };
