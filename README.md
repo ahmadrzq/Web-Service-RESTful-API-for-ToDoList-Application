@@ -14,7 +14,7 @@ The base URL for the deployed API is:
 
 #### Register
 
-*   **Endpoint:** **POST /register**
+*   **Endpoint:** **POST /auth/register**
 *   **Description:** Register a new user.
 *   **Request:**
 
@@ -43,7 +43,7 @@ The base URL for the deployed API is:
 
 #### Login
 
-*   **Endpoint:** **POST /login**
+*   **Endpoint:** **POST /auth/login**
 *   **Description:** Login with username or email.
 *   **Request:**
 
