@@ -1,5 +1,7 @@
 ## **ToDoList Application API Endpoints Documentation**
 
+This is an application that allows users to create, view, change, and delete to-do lists (ToDoList). This application was built using Express.js and MongoDB, and is equipped with authentication and authorization features to protect user data.
+
 ## **Base URL**
 
 The base URL for the deployed API is:
