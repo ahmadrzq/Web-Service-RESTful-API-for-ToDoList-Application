@@ -41,6 +41,8 @@ Replace **your\_secret\_key** with a secret key for JWT authentication.
 `**npm run dev**`
 The server will be running at **http://localhost:4600**.
 
+
+
 ## **API Consumption Guide**
 
 ## Base URL
