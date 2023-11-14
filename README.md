@@ -1,20 +1,61 @@
 ## **ToDoList Application API Endpoints Documentation**
 
-This is an application that allows users to create, view, change, and delete to-do lists (ToDoList). This application was built using Express.js and MongoDB, and is equipped with authentication and authorization features to protect user data.
+**This is an application that allows users to create, view, change, and delete to-do lists (ToDoList). This application was built using Express.js and MongoDB, and is equipped with authentication and authorization features to protect user data.**
 
-## **Base URL**
+## **Installation and Setup Instructions**
+Prerequisites
+
+Make sure you have the following installed on your machine:
+
+*   [Node.js](https://nodejs.org/)
+*   [MongoDB](https://www.mongodb.com/try/download/community)
+
+## Clone the Repository
+
+```plaintext
+git clone https://github.com/ahmadrzq/Web-Service-RESTful-API-for-ToDoList-Application.git
+cd Web-Service-RESTful-API-for-ToDoList-Application
+```
+
+## Install Dependencies
+
+```plaintext
+npm install
+```
+
+## Configure Environment Variables
+
+Create a **.env** file in the root directory and add the following:
+
+```plaintext
+PORT=4600
+MONGODB_URI=your_mongo_db_database_uri
+SECRET_KEY=your_secret_key
+```
+
+
+Replace **your\_secret\_key** with a secret key for JWT authentication.
+
+## Start the Server
+
+`**npm run dev**`
+The server will be running at **http://localhost:4600**.
+
+## **API Consumption Guide**
+
+## Base URL
 
 The base URL for the deployed API is:
 
 [https://jolly-gray-slippers.cyclic.app/api/v1](https://jolly-gray-slippers.cyclic.app/api/v1)
 
-## **Endpoints**
+## Endpoints
 
 ### **Authentication**
 
 #### Register
 
-*   **Endpoint:** **POST /auth/register**
+*   **Endpoint:** **POST /register**
 *   **Description:** Register a new user.
 *   **Request:**
 
@@ -43,7 +84,7 @@ The base URL for the deployed API is:
 
 #### Login
 
-*   **Endpoint:** **POST /auth/login**
+*   **Endpoint:** **POST /login**
 *   **Description:** Login with username or email.
 *   **Request:**
 
