@@ -6,7 +6,7 @@ This is an application that allows users to create, view, change, and delete to-
 
 The base URL for the deployed API is:
 
-[https://jolly-gray-slippers.cyclic.app/api/v1](https://jolly-gray-slippers.cyclic.app/)
+[https://jolly-gray-slippers.cyclic.app/api/v1](https://jolly-gray-slippers.cyclic.app/api/v1)
 
 ## **Endpoints**
 
